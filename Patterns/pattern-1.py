@@ -17,7 +17,9 @@ for i in range(n):
     for j in range(n):
         star+="*"
     print(star)
+
 print("    ")
+
 #method -2
 for i in range(n):
     print("*"*n)
