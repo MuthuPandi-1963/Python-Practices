@@ -26,9 +26,6 @@ def SortColors(nums):
             ones+=1
         else:
             twos+=1
-        
-        # for i in range(n):
-        # nums[zeros+ones-1]=1
     while( n > zeros+ones):
         n-=1
         nums[n]=2
@@ -42,8 +39,8 @@ def SortColors(nums):
         
 
     print(nums)
-# nums = [2,0,2,1,1,0]
-# SortColors(nums)
+nums = [2,0,2,1,1,0]
+SortColors(nums)
 SortColors([2, 1, 0, 1, 2, 1, 0, 1, 2, 0])
 SortColors([1, 2, 1, 2, 0])
 nums=[1, 2, 0, 1, 2, 0, 1, 2]
