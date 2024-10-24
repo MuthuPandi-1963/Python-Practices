@@ -24,21 +24,26 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 def maxProfit(prices):
     buy=prices[0]
     n=len(prices)
-    i,j=0,0
-    while (i<n):
+    stock=0
+    sell=0
+    for i in range(1,n):
         if(buy>prices[i]):
             buy=prices[i]
-            j=i
-        i+=1
-    sell=buy
-    while(j<n):
-        if(prices[j]>sell):
-            sell=prices[j]
-        j+=1
-    print(buy)
+            stock=buy
+        else:
+            stock=buy
+        j=i
+        while(j<n):
+            if stock < prices[j]:
+                if(sell < prices[j]-stock ):
+                    sell=prices[j]-stock
+            j+=1
     print(sell)
-    print(sell-buy if ((buy != prices[0]) and (sell != buy)) else 0)
+
+
     
 
 maxProfit([7,1,5,3,6,4])
 maxProfit([7,6,4,3,1])
+maxProfit([1,2])
+maxProfit([2,4,1])
