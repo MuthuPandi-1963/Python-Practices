@@ -16,6 +16,8 @@ def CountSubArray(nums,k):
         
 
     print(count)
+
+    
 # CountSubArray([-1,-1,1],0)
 CountSubArray([1,-1,0],0)
 CountSubArray([-1,-2,-3],-3)
